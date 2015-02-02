@@ -1,0 +1,95 @@
+﻿Build started 12/13/2014 6:28:17 PM.
+     1>Project "D:\DARV\DARV\DARV.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "Debug\DARV.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       CustomBuild:
+         All outputs are up-to-date.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I.\GeneratedFiles /I. /IC:\Qt\Qt5.2.0\5.2.0\msvc2010_opengl\include /I.\GeneratedFiles\Debug /IC:\Qt\Qt5.2.0\5.2.0\msvc2010_opengl\include\QtCore /IC:\Qt\Qt5.2.0\5.2.0\msvc2010_opengl\include\QtGui /IC:\Qt\Qt5.2.0\5.2.0\msvc2010_opengl\include\QtOpenGL /IC:\Qt\Qt5.2.0\5.2.0\msvc2010_opengl\include\QtSensors /IC:\Qt\Qt5.2.0\5.2.0\msvc2010_opengl\include\QtWidgets /ID:\DARV\\GlewLibrary\include /ID:\DARV\\GlutLibrary\include /ID:\DARV\\IGLLibrary\include /ID:\DARV\\GLMLibrary /ID:\DARV\\MathLibrary /ID:\DARV\\OpenCVLibrary /ID:\DARV\\ARLibrary\Metaio\include /ID:\DARV\\AssetLibrary\include /ID:\DARV\\VuzixLibrary\inc /ID:\DARV\\NatNetLibrary\include /Zi /nologo /W3 /WX- /Od /Oy- /D _WINDOWS /D UNICODE /D WIN32 /D QT_DLL /D QT_CORE_LIB /D QT_GUI_LIB /D QT_OPENGL_LIB /D QT_SENSORS_LIB /D QT_WIDGETS_LIB /D _CRT_SECURE_NO_WARNINGS /D _MBCS /Gm- /EHsc /MDd /GS /fp:precise /Zc:wchar_t- /Zc:forScope /GR /Yu"StdAfx.h" /Fp"Debug\DARV.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt TrackingManager.cpp VirtualReality.cpp
+         TrackingManager.cpp
+     1>TrackingManager.cpp(157): warning C4018: '<' : signed/unsigned mismatch
+     1>TrackingManager.cpp(316): warning C4101: 'left' : unreferenced local variable
+     1>TrackingManager.cpp(315): warning C4101: 'right' : unreferenced local variable
+     1>TrackingManager.cpp(332): warning C4101: 'left' : unreferenced local variable
+     1>TrackingManager.cpp(331): warning C4101: 'right' : unreferenced local variable
+     1>TrackingManager.cpp(357): warning C4101: 'left' : unreferenced local variable
+     1>TrackingManager.cpp(356): warning C4101: 'right' : unreferenced local variable
+     1>TrackingManager.cpp(665): warning C4018: '<' : signed/unsigned mismatch
+     1>TrackingManager.cpp(667): warning C4018: '<' : signed/unsigned mismatch
+     1>TrackingManager.cpp(679): warning C4018: '<' : signed/unsigned mismatch
+         VirtualReality.cpp
+         Generating Code...
+         All outputs are up-to-date.
+       ResourceCompile:
+         All outputs are up-to-date.
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\DARV\Win32\Debug\\DARV.exe" /NOLOGO /LIBPATH:C:\Qt\Qt5.2.0\5.2.0\msvc2010_opengl\lib /LIBPATH:C:\Qt\Qt5.2.0\5.2.0\msvc2010_opengl\plugins\accessible /LIBPATH:C:\Qt\Qt5.2.0\5.2.0\msvc2010_opengl\plugins\imageformats /LIBPATH:D:\DARV\\ARLibrary\ARToolKit\lib\SRC\AR /LIBPATH:D:\DARV\\ARLibrary\ARToolKit\lib /LIBPATH:D:\DARV\\ARLibrary\Metaio\bin /LIBPATH:D:\DARV\\MathLibrary\Eigen\src /LIBPATH:D:\DARV\\MathLibrary\Eigen /LIBPATH:"D:\DARV\\AssetLibrary\bin\assimp_debug-dll_win32" /LIBPATH:"D:\DARV\\AssetLibrary\lib\assimp_debug-dll_win32" /LIBPATH:D:\DARV\\GlutLibrary\lib /LIBPATH:D:\DARV\\GlewLibrary\lib /LIBPATH:D:\DARV\\OpenCVLibrary\lib /LIBPATH:D:\DARV\\VuzixLibrary\lib /LIBPATH:D:\DARV\\NatNetLibrary\lib metaioSDKD.lib qtmaind.lib winmm.lib Kernel32.lib glut32.lib Qt5Cored.lib Qt5Guid.lib Qt5OpenGLd.lib Qt5Xmld.lib opengl32.lib glu32.lib Qt5Widgetsd.lib Qt5Multimediad.lib Qt5MultimediaWidgetsd.lib wldap32.lib ws2_32.lib Dbghelp.lib glew32.lib assimp.lib opencv_highgui248d.lib opencv_core248d.lib opencv_imgproc248d.lib libAR.lib libARd.lib iweardrv.lib iwrstdrv.lib NatNetLib.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib DevIL.lib ILU.lib ILUT.lib /NODEFAULTLIB:LIBCMTD.lib /NODEFAULTLIB:MSVCRT.lib /MANIFEST /ManifestFile:"Debug\DARV.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"D:\DARV\Win32\Debug\DARV.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /MACHINE:X86 Debug\DARV.res
+         Debug\ARView.obj
+         Debug\ARViewWindow.obj
+         Debug\CameraImageLoader.obj
+         Debug\CameraThread.obj
+         Debug\CameraTracker.obj
+         Debug\CameraTrackerFusingIMU.obj
+         Debug\CameraTrackerNoIMU.obj
+         Debug\CameraView.obj
+         Debug\COS.obj
+         Debug\Darv.obj
+         Debug\DataCapture.obj
+         Debug\FileWriter.obj
+         Debug\moc_ARView.obj
+         Debug\moc_ARViewWindow.obj
+         Debug\moc_CameraImageLoader.obj
+         Debug\moc_CameraThread.obj
+         Debug\moc_Darv.obj
+         Debug\moc_ImageAnalyser.obj
+         Debug\moc_OptiTrack.obj
+         Debug\moc_TrackingManager.obj
+         Debug\qrc_Darv.obj
+         Debug\GlInfo.obj
+         Debug\Glsu.obj
+         Debug\ImageAnalyser.obj
+         Debug\ImageView.obj
+         Debug\image_DXT.obj
+         Debug\image_helper.obj
+         Debug\IMU.obj
+         Debug\IMUManager.obj
+         Debug\IMUManagerSimon.obj
+         Debug\IMUManagerVuzix.obj
+         Debug\iWearSDK.obj
+         Debug\main.obj
+         Debug\Marker.obj
+         Debug\OBJLoader.obj
+         Debug\OBJModels.obj
+         Debug\OptiTrack.obj
+         Debug\PBOUnpack.obj
+         Debug\QTPrimitives.obj
+         Debug\RecordLoader.obj
+         Debug\ReferenceTracker.obj
+         Debug\Room.obj
+         Debug\RotationViewer.obj
+         Debug\SetupLoader.obj
+         Debug\SOIL.obj
+         Debug\stb_image_aug.obj
+         Debug\TrackingManager.obj
+         Debug\Uncertainty.obj
+         Debug\UncertaintyCOS.obj
+         Debug\Util.obj
+         Debug\ValueTree.obj
+         Debug\VirtualObject.obj
+         Debug\VirtualRoom.obj
+         Debug\VirtualSetup.obj
+         Debug\VirtualReality.obj
+         Debug\VirtualMarker.obj
+         Debug\WindowManager.obj
+         LINK : D:\DARV\Win32\Debug\\DARV.exe not found or not built by the last incremental link; performing full link
+         DARV.vcxproj -> D:\DARV\Win32\Debug\DARV.exe
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"D:\DARV\Win32\Debug\\DARV.exe;#1" /manifest Debug\DARV.exe.intermediate.manifest
+       FinalizeBuildStatus:
+         Deleting file "Debug\DARV.unsuccessfulbuild".
+         Touching "Debug\DARV.lastbuildstate".
+     1>Done Building Project "D:\DARV\DARV\DARV.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:08.53

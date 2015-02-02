@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<Camera>
+      <Name>Logitech HD Pro Webcam C920</Name>
+      <Info />
+      <CalibrationResolution>
+            <X>1280</X>
+            <Y>720</Y>
+      </CalibrationResolution>
+      <FocalLength>
+            <X>919.499939</X>
+            <Y>924.9303</Y>
+      </FocalLength>
+      <PrincipalPoint>
+            <X>647.605347</X>
+            <Y>346.699249</Y>
+      </PrincipalPoint>
+      <Distortion>
+            <k1>0.144473076</k1>
+            <k2>-0.335556984</k2>
+            <p1>-0.00685954746</p1>
+            <p2>-0.000696292729</p2>
+      </Distortion>
+</Camera>

@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<Camera>
+      <Name>ManyCam Virtual Webcam</Name>
+      <Info />
+      <CalibrationResolution>
+            <X>640</X>
+            <Y>480</Y>
+      </CalibrationResolution>
+      <FocalLength>
+            <X>851.606567</X>
+            <Y>848.411133</Y>
+      </FocalLength>
+      <PrincipalPoint>
+            <X>311.7521</X>
+            <Y>256.762756</Y>
+      </PrincipalPoint>
+      <Distortion>
+            <k1>-0.03529602</k1>
+            <k2>-0.203646868</k2>
+            <p1>0.0041557583</p1>
+            <p2>-3.05915964E-05</p2>
+      </Distortion>
+</Camera>

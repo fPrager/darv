@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<MetaData>
+<data>
+<time> 0</time>
+<entry>
+<Date>13.11.114</Date>
+<Time>18:32:56</Time>
+<MarkerCnt>5</MarkerCnt>
+<LeftCaptured>True</LeftCaptured>
+<RightCaptured>True</RightCaptured>
+<Camera>ManyCam Virtual Webcam</Camera>
+<FPS>30</FPS>
+<ResX>640</ResX>
+<ResY>480</ResY>
+<CubeX>-68.81</CubeX>
+<CubeY>74.63</CubeY>
+<CubeZ>40.426</CubeZ>
+<CubeYaw>0.052</CubeYaw>
+<CubePitch>-0.046</CubePitch>
+<CubeRoll>0.749</CubeRoll>
+<IMU>VUZIX's IMU-Manager</IMU>
+<UsingOptiTrack>True</UsingOptiTrack>
+</entry>
+</data>
+</MetaData>

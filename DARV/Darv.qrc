@@ -1,0 +1,18 @@
+<RCC>
+  <qresource prefix="DARV">
+    <file>Resources/Skin/background.png</file>
+    <file>Resources/Skin/iconCapture.png</file>
+    <file>Resources/Skin/iconCapture2.png</file>
+    <file>Resources/Skin/iconIMUReset.png</file>
+    <file>Resources/Skin/iconIMUResetDisabled.png</file>
+    <file>Resources/Skin/iconIMUSetting.png</file>
+    <file>Resources/Skin/iconIMUSettingDisabled.png</file>
+    <file>Resources/Skin/iconOptiReset.png</file>
+    <file>Resources/Skin/iconOptiResetDisabled.png</file>
+    <file>Resources/Skin/iconOptiSetting.png</file>
+    <file>Resources/Skin/iconOptiSettingDisabled.png</file>
+    <file>Resources/Skin/iconViewSetting.png</file>
+    <file>Resources/Skin/iconMonoSetting.png</file>
+    <file>Resources/Skin/iconStereoSetting.png</file>
+  </qresource>
+</RCC>

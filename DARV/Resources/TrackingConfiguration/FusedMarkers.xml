@@ -1,0 +1,324 @@
+<?xml version="1.0"?>
+<!--	Example tracking configuration file for fusing marker-based tracking
+		of two markers into one coordinate system.
+ -->
+<TrackingData>
+	<Sensors>
+
+		<!--	Use "MarkerBasedSensorSource" as type to use marker tracking -->
+		<Sensor type="MarkerBasedSensorSource">
+
+			<!--	Assign ID to uniquely identify this tracker -->
+			<SensorID>Markertracking1</SensorID>
+
+			<Parameters>
+
+				<!--	Parameters for the marker tracker itself. These 
+						parameters are independent from the specific markers. 
+						-->
+				<MarkerTrackingParameters>
+
+					<!--	Strategy which is used for the marker detection. 
+							There are two types available:
+							- "robust" to use a robust approach to detect the 
+							  markers, which usually gives the best results, 
+							  but consumes more computational time, i.e. is 
+							  slower.
+							- "fast" to use a more simple approach to detect 
+							  the markers, which is less precise, but faster 
+							  than robust. 
+							  -->
+					<TrackingQuality>robust</TrackingQuality>
+					<!--	<TrackingQuality>fast</TrackingQuality> -->
+
+					<!--	The threshold which is used to binarize the camera 
+							image. Binarizing is the process where each pixel 
+							is converted to a grayscale value (between 0 and 
+							255) and then is set to 0 when the value is below 
+							the threshold and to 1 when the value is above. 
+							This helps to clearly identify the marker and is 
+							therefore important for the detection process. When 
+							the tracking quality is set to "fast", then this 
+							value is fixed and will not change during the 
+							tracking process. When the tracking quality is set 
+							to "robust", then the value is only the starting 
+							value, and the threshold is adapted when no marker 
+							was detected. Therefore it allows to detect markers 
+							when using a fixed threshold would lead to failure. 
+							The value range for the threshold is between 0 
+							and 255. -->
+					<ThresholdOffset>128</ThresholdOffset>
+
+					<!--	Number of search iterations which controls the 
+							number of attempts to find a marker with a new 
+							threshold. This needs to be set when "robust" is 
+							set as "TrackingQuality", but is ignored for "fast". 
+							With a high number, the marker tracker is more 
+							likely to detect a marker, but it also needs more 
+							computational time, i.e. is slower. -->
+					<NumberOfSearchIterations>3</NumberOfSearchIterations>
+
+				</MarkerTrackingParameters>
+			</Parameters>
+
+
+			<!--	The following XML nodes define the markers which are used 
+					for marker tracking. Each node is independent from each 
+					other. "COS" stands for "coordinate system" because 
+					each marker is associated with an independent coordinate 
+					system. -->
+
+			<!--	Example ID marker configuration, which uses a matrix ID 
+					(similar to a 2D barcode) to identify the marker. The 
+					matrix ID must be provided and should be unique for each 
+					marker. Two markers cannot have the same matrix ID. -->
+			<SensorCOS>
+
+				<!--	ID string for uniquely identifying the marker. This ID 
+						string must not be assigned to another marker. -->
+				<SensorCosID>Marker_Oben</SensorCosID>
+
+				<Parameters>
+
+					<!--	Description of the marker properties. -->
+					<MarkerParameters>
+
+						<!--	Size of the marker which has to be provided to 
+								correctly relate the marker pixel size to world 
+								coordinates. The size is specified in 
+								millimeters. -->
+						<Size>144</Size>
+
+						<!--	Matrix ID to identify the marker. The ID is
+								associated with the pattern on the marker and 
+								is used to identify the marker in the camera 
+								image. -->
+						<MatrixID>7</MatrixID>
+
+					</MarkerParameters>
+				</Parameters>
+			</SensorCOS>
+			
+			<SensorCOS>
+
+				<!--	ID string for uniquely identifying the marker. This ID 
+						string must not be assigned to another marker. -->
+				<SensorCosID>Marker_Unten</SensorCosID>
+
+				<Parameters>
+
+					<!--	Description of the marker properties. -->
+					<MarkerParameters>
+
+						<!--	Size of the marker which has to be provided to 
+								correctly relate the marker pixel size to world 
+								coordinates. The size is specified in 
+								millimeters. -->
+						<Size>144</Size>
+
+						<!--	Matrix ID to identify the marker. The ID is
+								associated with the pattern on the marker and 
+								is used to identify the marker in the camera 
+								image. -->
+						<MatrixID>12</MatrixID>
+
+					</MarkerParameters>
+				</Parameters>
+			</SensorCOS>
+			
+		</Sensor>
+	</Sensors>
+	
+	<!--	Now we can define connections between SensorCOS and COS entities. 
+		This allows you to define a rigid transformation that is to be 
+		applied before the augmentation happens. So basically, you can 
+		shift and rotate the model to be augmented against the sensor's 
+		COS. Connections also enable for fusing SensorCOSes to a single COS -->			
+	<Connections>
+		<COS>
+
+			<!-- You should choose a descriptive name for this COS. -->
+			<Name>MarkerlessCos1</Name>
+
+			<!-- Which type of Fuser to use. -->
+			<Fuser Type="SmoothingFuser">
+				<Parameters>
+					
+					<!--	For how many frames we will predict the pose in 
+					case tracking fails. -->
+					<KeepPoseForNumberOfFrames>2</KeepPoseForNumberOfFrames>
+					
+					<!--	If the tracking device is equipped with an inertial 
+							sensor that can measure gravity, the sensor's 
+							measurement can be used to improve the pose 
+							estimate. To activate this option, you need to set
+							the value of this tag to "replaceZAxis". 
+							This is an advanced option that should only be used 
+							if you know what you are doing. -->
+					<GravityAssistance></GravityAssistance>
+					
+					<!-- 	Data (position) smoothing factor for double 
+							exponential smoothing of translation. This value 
+							should be high if you expect accurate measurements, 
+							and low otherwise. A high value assigns a higher 
+							weight to a new measurement. Typically, the 
+							accuracy of translation estimates is rather 
+							high, so we set the smoothing factor to 0.8. The 
+							default value is 0.5. 
+							This is an advanced option that should only be used 
+							if you know what you are doing. -->
+					<AlphaTranslation>0.8</AlphaTranslation>
+					
+					<!-- 	Trend (velocity) smoothing factor for double 
+							exponential smoothing of translation. This value 
+							should be high if you expect accurate sensor 
+							measurents, and low otherwise. With the same 
+							reasoning as above, we set the smoothing factor to 
+							0.8. The default value is 0.5. 
+							This is an advanced option that should only be used 
+							if you know what you are doing. -->
+					<GammaTranslation>0.8</GammaTranslation>
+
+					<!-- 	Data (position) smoothing factor for double 
+							exponential smoothing of rotation. Rotation 
+							measurements are typically not as accurate as 
+							translation measurements, so we use a value of 0.5.
+							This is an advanced option that should only be used 
+							if you know what you are doing. -->
+					<AlphaRotation>0.5</AlphaRotation>
+	
+					<!-- 	Trend (velocity) smoothing factor for double 
+							exponential smoothing of rotation. With the same
+							reasoning as for AlphaRotation above, we set this 
+							value to 0.5. 
+							This is an advanced option that should only be used 
+							if you know what you are doing. -->
+					<GammaRotation>0.5</GammaRotation>
+					
+					<!--	If an orientation sensor is available, the system
+							may try to keep updating the pose based on that 
+							sensor's measurements. If you want to use an 
+							orientation sensor in that way, then set this 
+							option to true. The default value is false. 
+							This is an advanced option that should only be used 
+							if you know what you are doing. -->
+					<ContinueLostTrackingWithOrientationSensor>false</ContinueLostTrackingWithOrientationSensor>
+				</Parameters>
+			</Fuser>
+			
+			<!--	To fuse different markers to one COS it is mandatory
+					to have multiple SensorSource with different COSOffset
+					inside of one "COS" tag. In this case the marker with
+					the SensorCosID "Marker2" lies 200mm in x direction of 
+					the marker with the SensorCosID "Marker1". 
+					To determine the relation between several markers
+					it is recommended  to use the 
+					TrackingData_InterMarkerCalibration.xml-->
+					
+			<!--The first SensorSource that is fused in this COS -->
+			<SensorSource>
+
+				<!--	The sensor and sensor COS that we want to use. Note 
+						that these IDs are the same that we have used  in the 
+						sensor definition above. -->
+				<SensorID>Markertracking1</SensorID>
+				<SensorCosID>Marker1</SensorCosID>
+
+				<!--	A hand-eye calibration allows you to specify the 
+						relative pose between two sensors. In the simple case 
+						of having one camera-based sensor, it is usually not 
+						used. It allows you to move the COS "as if" the camera 
+						were moved, and is thus	inverse to the COSOffset 
+						transformation you can specify below. -->
+				<HandEyeCalibration>
+				
+					<!--	The 3D translation vector. -->
+					<TranslationOffset>
+						<X>0</X>
+						<Y>0</Y>
+						<Z>0</Z>
+					</TranslationOffset>
+					
+					<!--	Rotations are specified via unit quaternions. -->
+					<RotationOffset>
+						<X>0</X>
+						<Y>0</Y>
+						<Z>0</Z>
+						<W>1</W>
+					</RotationOffset>
+				</HandEyeCalibration>
+
+				<!--	The COSOffset specifies a rigid transformation that 
+						is applied to the sensor's COS. This allows you to 
+						move the augmented model. It is specified just the same 
+						way as the hand-eye-calibration. -->
+				<COSOffset>
+					<TranslationOffset>
+						<X>0</X>
+						<Y>0</Y>
+						<Z>0</Z>
+					</TranslationOffset>
+					<RotationOffset>
+						<X>0</X>
+						<Y>0</Y>
+						<Z>0</Z>
+						<W>1</W>
+					</RotationOffset>
+				</COSOffset>
+			</SensorSource>
+			
+			<!--The second SensorSource that is fused in this COS -->
+			<SensorSource>
+
+				<!--	The sensor and sensor COS that we want to use. Note 
+						that these IDs are the same that we have used  in the 
+						sensor definition above. -->
+				<SensorID>Markertracking1</SensorID>
+				<SensorCosID>Marker2</SensorCosID>
+
+				<!--	A hand-eye calibration allows you to specify the 
+						relative pose between two sensors. In the simple case 
+						of having one camera-based sensor, it is usually not 
+						used. It allows you to move the COS "as if" the camera 
+						were moved, and is thus	inverse to the COSOffset 
+						transformation you can specify below. -->
+				<HandEyeCalibration>
+				
+					<!--	The 3D translation vector. -->
+					<TranslationOffset>
+						<X>200</X>
+						<Y>0</Y>
+						<Z>0</Z>
+					</TranslationOffset>
+					
+					<!--	Rotations are specified via unit quaternions. -->
+					<RotationOffset>
+						<X>0</X>
+						<Y>0</Y>
+						<Z>0</Z>
+						<W>1</W>
+					</RotationOffset>
+				</HandEyeCalibration>
+
+				<!--	The COSOffset specifies a rigid transformation that 
+						is applied to the sensor's COS. This allows you to 
+						move the augmented model. It is specified just the same 
+						way as the hand-eye-calibration. -->
+				<COSOffset>
+					<TranslationOffset>
+						<X>0</X>
+						<Y>0</Y>
+						<Z>0</Z>
+					</TranslationOffset>
+					<RotationOffset>
+						<X>0</X>
+						<Y>0</Y>
+						<Z>0</Z>
+						<W>1</W>
+					</RotationOffset>
+				</COSOffset>
+			</SensorSource>
+			
+		</COS>
+	</Connections>
+</TrackingData>

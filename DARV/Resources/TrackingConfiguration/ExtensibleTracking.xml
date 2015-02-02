@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<TrackingData>
+    <Sensors>
+        <Sensor Type="Extensible">
+            <SensorID>ExtensibleSensor1</SensorID>
+            <Parameters>
+                <ExtensibleSensor Type="FeatureBasedSensorSource"
+                    Subtype="ML3D">
+                    <SensorID>FeatureTracking1</SensorID>
+                    <Parameters>
+                        <FeatureDescriptorAlignment>regular</FeatureDescriptorAlignment>
+                    </Parameters>
+                </ExtensibleSensor>
+            </Parameters>
+            <SensorCOS>
+                <SensorCosID>Markers_Fused</SensorCosID>
+                <Parameters>
+                    <TrackingConfiguration>MultipleMarker.xml
+                    </TrackingConfiguration>
+                </Parameters>
+            </SensorCOS>
+            <SensorCOS>
+                <SensorCosID>Map3D</SensorCosID>
+                <Parameters>
+                    <NumExtensibleFeatures>1000</NumExtensibleFeatures>
+                </Parameters>
+            </SensorCOS>
+        </Sensor>
+    </Sensors>
+    <Connections>
+        <COS>
+            <Name>Markers_Fused</Name>
+            <SensorSource>
+                <SensorID>ExtensibleSensor1</SensorID>
+                <SensorCosID>Markers_Fused</SensorCosID>
+            </SensorSource>
+        </COS>
+        <COS>
+            <Name>Map3D</Name>
+            <SensorSource>
+                <SensorID>ExtensibleSensor1</SensorID>
+                <SensorCosID>Map3D</SensorCosID>
+            </SensorSource>
+        </COS>
+    </Connections>
+</TrackingData>

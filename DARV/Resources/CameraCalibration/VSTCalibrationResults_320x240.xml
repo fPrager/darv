@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<Camera>
+  <Name>Vimicro USB2.0 UVC PC Camera</Name>
+  <Info />
+  <CalibrationResolution>
+    <X>320</X>
+    <Y>240</Y>
+  </CalibrationResolution>
+  <FocalLength>
+    <X>421.4793</X>
+    <Y>421.814026</Y>
+  </FocalLength>
+  <PrincipalPoint>
+    <X>156.507248</X>
+    <Y>122.223984</Y>
+  </PrincipalPoint>
+  <Distortion>
+    <k1>-0.12964648</k1>
+    <k2>0.117994696</k2>
+    <p1>0.004162839</p1>
+    <p2>0.00220941775</p2>
+  </Distortion>
+</Camera>

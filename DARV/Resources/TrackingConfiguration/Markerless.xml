@@ -1,0 +1,139 @@
+<?xml version="1.0"?>
+<TrackingData>
+  <Sensors>
+    <Sensor type="FeatureBasedSensorSource">
+      <SensorID>FeatureTracking1</SensorID>
+      <Parameters>
+        <FeatureBasedParameters />
+      </Parameters>
+      <SensorCOS>
+        <SensorCosID>Pikachu</SensorCosID>
+        <Parameters>
+          <referenceImage widthMM="110" heightMM="110">..\..\ARLibrary\CustomMarker\pikachu.png</referenceImage>
+        </Parameters>
+      </SensorCOS>
+      <SensorCOS>
+        <SensorCosID>VuzixMarker</SensorCosID>
+        <Parameters>
+          <referenceImage widthMM="90" heightMM="90">..\..\ARLibrary\CustomMarker\VuzixMarker.png</referenceImage>
+        </Parameters>
+      </SensorCOS>
+      <SensorCOS>
+        <SensorCosID>Face</SensorCosID>
+        <Parameters>
+          <referenceImage widthMM="300" heightMM="300">..\..\ARLibrary\CustomMarker\Face.png</referenceImage>
+        </Parameters>
+      </SensorCOS>
+    </Sensor>
+  </Sensors>
+  <Connections>
+    <COS>
+      <Name>COS_Patch_pikachu</Name>
+      <Fuser type="BestQualityFuser">
+        <Parameters />
+      </Fuser>
+      <SensorSource trigger="1">
+        <SensorID>FeatureTracking2</SensorID>
+        <SensorCosID>Pikachu</SensorCosID>
+        <HandEyeCalibration>
+          <TranslationOffset>
+            <x>0</x>
+            <y>0</y>
+            <z>0</z>
+          </TranslationOffset>
+          <RotationOffset>
+            <x>0</x>
+            <y>0</y>
+            <z>0</z>
+            <w>1</w>
+          </RotationOffset>
+        </HandEyeCalibration>
+        <COSOffset>
+          <TranslationOffset>
+            <x>0</x>
+            <y>0</y>
+            <z>0</z>
+          </TranslationOffset>
+          <RotationOffset>
+            <x>0</x>
+            <y>0</y>
+            <z>0</z>
+            <w>1</w>
+          </RotationOffset>
+        </COSOffset>
+      </SensorSource>
+    </COS>
+    <COS>
+      <Name>COS_Patch_VuzixMarker</Name>
+      <Fuser type="BestQualityFuser">
+        <Parameters />
+      </Fuser>
+      <SensorSource trigger="1">
+        <SensorID>FeatureTracking1</SensorID>
+        <SensorCosID>VuzixMarker</SensorCosID>
+        <HandEyeCalibration>
+          <TranslationOffset>
+            <x>0</x>
+            <y>0</y>
+            <z>0</z>
+          </TranslationOffset>
+          <RotationOffset>
+            <x>0</x>
+            <y>0</y>
+            <z>0</z>
+            <w>1</w>
+          </RotationOffset>
+        </HandEyeCalibration>
+        <COSOffset>
+          <TranslationOffset>
+            <x>0</x>
+            <y>0</y>
+            <z>0</z>
+          </TranslationOffset>
+          <RotationOffset>
+            <x>0</x>
+            <y>0</y>
+            <z>0</z>
+            <w>1</w>
+          </RotationOffset>
+        </COSOffset>
+      </SensorSource>
+    </COS>
+    <COS>
+      <Name>COS_Patch_FaceMarker</Name>
+      <Fuser type="BestQualityFuser">
+        <Parameters />
+      </Fuser>
+      <SensorSource trigger="1">
+        <SensorID>FeatureTracking1</SensorID>
+        <SensorCosID>Face</SensorCosID>
+        <HandEyeCalibration>
+          <TranslationOffset>
+            <x>0</x>
+            <y>0</y>
+            <z>0</z>
+          </TranslationOffset>
+          <RotationOffset>
+            <x>0</x>
+            <y>0</y>
+            <z>0</z>
+            <w>1</w>
+          </RotationOffset>
+        </HandEyeCalibration>
+        <COSOffset>
+          <TranslationOffset>
+            <x>0</x>
+            <y>0</y>
+            <z>0</z>
+          </TranslationOffset>
+          <RotationOffset>
+            <x>0</x>
+            <y>0</y>
+            <z>0</z>
+            <w>1</w>
+          </RotationOffset>
+        </COSOffset>
+      </SensorSource>
+    </COS>
+  </Connections>
+</TrackingData>

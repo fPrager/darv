@@ -1,0 +1,462 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{AA6681E6-D424-4621-BE3D-794664D5F28B}</ProjectGuid>
+    <Keyword>Qt4VSv1.0</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</IgnoreImportLibrary>
+    <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</IgnoreImportLibrary>
+    <RunCodeAnalysis Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</RunCodeAnalysis>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;WIN32;QT_DLL;QT_CORE_LIB;QT_GUI_LIB;QT_OPENGL_LIB;QT_SENSORS_LIB;QT_WIDGETS_LIB;_CRT_SECURE_NO_WARNINGS ;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtSensors;$(QTDIR)\include\QtWidgets;$(SolutionDir)\GlewLibrary\include;$(SolutionDir)\GlutLibrary\include;$(SolutionDir)\IGLLibrary\include;$(SolutionDir)\GLMLibrary;$(SolutionDir)\MathLibrary;$(SolutionDir)\OpenCVLibrary;$(SolutionDir)\ARLibrary\Metaio\include;$(SolutionDir)\AssetLibrary\include;%(AdditionalIncludeDirectories);$(SolutionDir)\VuzixLibrary\inc;$(SolutionDir)\NatNetLibrary\include</AdditionalIncludeDirectories>
+      <Optimization>Disabled</Optimization>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level3</WarningLevel>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <OutputFile>$(OutDir)\$(ProjectName).exe</OutputFile>
+      <AdditionalLibraryDirectories>$(QTDIR)\lib;$(QTDIR)\plugins\accessible;$(QTDIR)\plugins\imageformats;$(SolutionDir)\ARLibrary\ARToolKit\lib\SRC\AR;$(SolutionDir)\ARLibrary\ARToolKit\lib;$(SolutionDir)\ARLibrary\Metaio\bin;$(SolutionDir)\MathLibrary\Eigen\src;$(SolutionDir)\MathLibrary\Eigen;$(SolutionDir)\AssetLibrary\bin\assimp_debug-dll_win32;$(SolutionDir)\AssetLibrary\lib\assimp_debug-dll_win32;$(SolutionDir)\GlutLibrary\lib;$(SolutionDir)\GlewLibrary\lib;$(SolutionDir)\OpenCVLibrary\lib;%(AdditionalLibraryDirectories);$(SolutionDir)\VuzixLibrary\lib;$(SolutionDir)\NatNetLibrary\lib</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>metaioSDKD.lib;qtmaind.lib;winmm.lib;Kernel32.lib;glut32.lib;Qt5Cored.lib;Qt5Guid.lib;Qt5OpenGLd.lib;Qt5Xmld.lib;opengl32.lib;glu32.lib;Qt5Widgetsd.lib;Qt5Multimediad.lib;Qt5MultimediaWidgetsd.lib;wldap32.lib;ws2_32.lib;Dbghelp.lib;glew32.lib;assimp.lib;opencv_highgui248d.lib;opencv_core248d.lib;opencv_imgproc248d.lib;libAR.lib;libARd.lib;iweardrv.lib;iwrstdrv.lib;NatNetLib.lib;%(AdditionalDependencies);DevIL.lib;ILU.lib;ILUT.lib</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>LIBCMTD.lib;MSVCRT.lib;</IgnoreSpecificDefaultLibraries>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>UNICODE;WIN32;WIN64;QT_DLL;QT_NO_DEBUG;NDEBUG;QT_CORE_LIB;QT_GUI_LIB;QT_OPENGL_LIB;QT_SENSORS_LIB;QT_WIDGETS_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtSensors;$(QTDIR)\include\QtWidgets;$(SolutionDir)\GlewLibrary\include;$(SolutionDir)\GlutLibrary\include;$(SolutionDir)\IGLLibrary\include;$(SolutionDir)\GLMLibrary;$(SolutionDir)\MathLibrary;$(SolutionDir)\OpenCVLibrary;$(SolutionDir)\ARLibrary\Metaio\include;$(SolutionDir)\AssetLibrary\include;$(SolutionDir)\VuzixLibrary\inc;$(SolutionDir)\NatNetLibrary\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <OutputFile>$(OutDir)\$(ProjectName).exe</OutputFile>
+      <AdditionalLibraryDirectories>$(QTDIR)\lib;$(QTDIR)\plugins\accessible;$(QTDIR)\plugins\imageformats;$(SolutionDir)\ARLibrary\ARToolKit\lib\SRC\AR;$(SolutionDir)\ARLibrary\ARToolKit\lib;$(SolutionDir)\ARLibrary\Metaio\bin;$(SolutionDir)\MathLibrary\Eigen\src;$(SolutionDir)\MathLibrary\Eigen;$(SolutionDir)\AssetLibrary\bin\assimp_debug-dll_win32;$(SolutionDir)\AssetLibrary\lib\assimp_debug-dll_win32;$(SolutionDir)\GlutLibrary\lib;$(SolutionDir)\GlewLibrary\lib;$(SolutionDir)\OpenCVLibrary\lib;$(SolutionDir)\VuzixLibrary\lib;%(AdditionalLibraryDirectories);$(SolutionDir)\AssetLibrary\lib\assimp_release-dll_win32;$(SolutionDir)\NatNetLibrary\lib</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <AdditionalDependencies>metaioSDK.lib;qtmain.lib;winmm.lib;Kernel32.lib;glut32.lib;Qt5Core.lib;Qt5Gui.lib;Qt5OpenGL.lib;Qt5Xml.lib;opengl32.lib;glu32.lib;Qt5Widgets.lib;Qt5Multimedia.lib;Qt5MultimediaWidgets.lib;wldap32.lib;ws2_32.lib;Dbghelp.lib;glew32.lib;assimp.lib;opencv_highgui248.lib;opencv_core248.lib;opencv_imgproc248.lib;libAR.lib;iweardrv.lib;iwrstdrv.lib;NatNetLib.lib;%(AdditionalDependencies);DevIL.lib;ILU.lib;ILUT.lib</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>
+      </IgnoreSpecificDefaultLibraries>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="ARView.cpp" />
+    <ClCompile Include="ARViewWindow.cpp" />
+    <ClCompile Include="CameraImageLoader.cpp" />
+    <ClCompile Include="CameraThread.cpp" />
+    <ClCompile Include="CameraTracker.cpp" />
+    <ClCompile Include="CameraTrackerFusingIMU.cpp" />
+    <ClCompile Include="CameraTrackerNoIMU.cpp" />
+    <ClCompile Include="CameraView.cpp" />
+    <ClCompile Include="COS.cpp" />
+    <ClCompile Include="Darv.cpp" />
+    <ClCompile Include="DataCapture.cpp" />
+    <ClCompile Include="FileWriter.cpp" />
+    <ClCompile Include="GeneratedFiles\Debug\moc_ARView.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_ARViewWindow.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_CameraImageLoader.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_CameraThread.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_Darv.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_ImageAnalyser.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_OptiTrack.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_TrackingManager.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\qrc_Darv.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_ARView.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_ARViewWindow.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_CameraImageLoader.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_CameraThread.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_Darv.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_ImageAnalyser.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_OptiTrack.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_TrackingManager.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GlInfo.cpp" />
+    <ClCompile Include="Glsu.cpp" />
+    <ClCompile Include="ImageAnalyser.cpp" />
+    <ClCompile Include="ImageView.cpp" />
+    <ClCompile Include="image_DXT.cpp" />
+    <ClCompile Include="image_helper.cpp" />
+    <ClCompile Include="IMU.cpp" />
+    <ClCompile Include="IMUManager.cpp" />
+    <ClCompile Include="IMUManagerSimon.cpp" />
+    <ClCompile Include="IMUManagerVuzix.cpp" />
+    <ClCompile Include="iWearSDK.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Marker.cpp" />
+    <ClCompile Include="OBJLoader.cpp" />
+    <ClCompile Include="OBJModels.cpp" />
+    <ClCompile Include="OptiTrack.cpp" />
+    <ClCompile Include="PBOUnpack.cpp" />
+    <ClCompile Include="QTPrimitives.cpp" />
+    <ClCompile Include="RecordLoader.cpp" />
+    <ClCompile Include="ReferenceTracker.cpp" />
+    <ClCompile Include="Room.cpp" />
+    <ClCompile Include="RotationViewer.cpp" />
+    <ClCompile Include="SetupLoader.cpp" />
+    <ClCompile Include="SOIL.cpp" />
+    <ClCompile Include="stb_image_aug.cpp" />
+    <ClCompile Include="TrackingManager.cpp" />
+    <ClCompile Include="Uncertainty.cpp" />
+    <ClCompile Include="UncertaintyCOS.cpp" />
+    <ClCompile Include="Util.cpp" />
+    <ClCompile Include="ValueTree.cpp" />
+    <ClCompile Include="VirtualObject.cpp" />
+    <ClCompile Include="VirtualRoom.cpp" />
+    <ClCompile Include="VirtualSetup.cpp" />
+    <ClCompile Include="VirtualReality.cpp" />
+    <ClCompile Include="VirtualMarker.cpp" />
+    <ClCompile Include="WindowManager.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="Darv.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing Darv.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_DLL -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGL_LIB -DQT_SENSORS_LIB -DQT_WIDGETS_LIB -D_CRT_SECURE_NO_WARNINGS -D_MBCS  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtSensors" "-I$(QTDIR)\include\QtWidgets" "-I$(SolutionDir)\GlewLibrary\include" "-I$(SolutionDir)\GlutLibrary\include" "-I$(SolutionDir)\IGLLibrary\include" "-I$(SolutionDir)\GLMLibrary" "-I$(SolutionDir)\MathLibrary" "-I$(SolutionDir)\OpenCVLibrary" "-I$(SolutionDir)\ARLibrary\Metaio\include" "-I$(SolutionDir)\AssetLibrary\include" "-I$(INHERIT)\." "-I$(SolutionDir)\VuzixLibrary\inc" "-I$(SolutionDir)\NatNetLibrary\include" "-fStdAfx.h" "-f../../Darv.h"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing Darv.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGL_LIB -DQT_SENSORS_LIB -DQT_WIDGETS_LIB -D_MBCS  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtSensors" "-I$(QTDIR)\include\QtWidgets" "-I$(SolutionDir)\GlewLibrary\include" "-I$(SolutionDir)\GlutLibrary\include" "-I$(SolutionDir)\IGLLibrary\include" "-I$(SolutionDir)\GLMLibrary" "-I$(SolutionDir)\MathLibrary" "-I$(SolutionDir)\OpenCVLibrary" "-I$(SolutionDir)\ARLibrary\Metaio\include" "-I$(SolutionDir)\AssetLibrary\include" "-I$(SolutionDir)\VuzixLibrary\inc" "-I$(SolutionDir)\NatNetLibrary\include"</Command>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="Darv.ui">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="CameraThread.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing CameraThread.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_DLL -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGL_LIB -DQT_SENSORS_LIB -DQT_WIDGETS_LIB -D_CRT_SECURE_NO_WARNINGS -D_MBCS  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtSensors" "-I$(QTDIR)\include\QtWidgets" "-I$(SolutionDir)\GlewLibrary\include" "-I$(SolutionDir)\GlutLibrary\include" "-I$(SolutionDir)\IGLLibrary\include" "-I$(SolutionDir)\GLMLibrary" "-I$(SolutionDir)\MathLibrary" "-I$(SolutionDir)\OpenCVLibrary" "-I$(SolutionDir)\ARLibrary\Metaio\include" "-I$(SolutionDir)\AssetLibrary\include" "-I$(INHERIT)\." "-I$(SolutionDir)\VuzixLibrary\inc" "-I$(SolutionDir)\NatNetLibrary\include" "-fStdAfx.h" "-f../../CameraThread.h"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing CameraThread.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGL_LIB -DQT_SENSORS_LIB -DQT_WIDGETS_LIB -D_MBCS  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtSensors" "-I$(QTDIR)\include\QtWidgets" "-I$(SolutionDir)\GlewLibrary\include" "-I$(SolutionDir)\GlutLibrary\include" "-I$(SolutionDir)\IGLLibrary\include" "-I$(SolutionDir)\GLMLibrary" "-I$(SolutionDir)\MathLibrary" "-I$(SolutionDir)\OpenCVLibrary" "-I$(SolutionDir)\ARLibrary\Metaio\include" "-I$(SolutionDir)\AssetLibrary\include" "-I$(SolutionDir)\VuzixLibrary\inc" "-I$(SolutionDir)\NatNetLibrary\include"</Command>
+    </CustomBuild>
+    <CustomBuild Include="CameraImageLoader.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing CameraImageLoader.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_DLL -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGL_LIB -DQT_SENSORS_LIB -DQT_WIDGETS_LIB -D_CRT_SECURE_NO_WARNINGS -D_MBCS  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtSensors" "-I$(QTDIR)\include\QtWidgets" "-I$(SolutionDir)\GlewLibrary\include" "-I$(SolutionDir)\GlutLibrary\include" "-I$(SolutionDir)\IGLLibrary\include" "-I$(SolutionDir)\GLMLibrary" "-I$(SolutionDir)\MathLibrary" "-I$(SolutionDir)\OpenCVLibrary" "-I$(SolutionDir)\ARLibrary\Metaio\include" "-I$(SolutionDir)\AssetLibrary\include" "-I$(INHERIT)\." "-I$(SolutionDir)\VuzixLibrary\inc" "-I$(SolutionDir)\NatNetLibrary\include" "-fStdAfx.h" "-f../../CameraImageLoader.h"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing CameraImageLoader.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGL_LIB -DQT_SENSORS_LIB -DQT_WIDGETS_LIB -D_MBCS  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtSensors" "-I$(QTDIR)\include\QtWidgets" "-I$(SolutionDir)\GlewLibrary\include" "-I$(SolutionDir)\GlutLibrary\include" "-I$(SolutionDir)\IGLLibrary\include" "-I$(SolutionDir)\GLMLibrary" "-I$(SolutionDir)\MathLibrary" "-I$(SolutionDir)\OpenCVLibrary" "-I$(SolutionDir)\ARLibrary\Metaio\include" "-I$(SolutionDir)\AssetLibrary\include" "-I$(SolutionDir)\VuzixLibrary\inc" "-I$(SolutionDir)\NatNetLibrary\include"</Command>
+    </CustomBuild>
+    <ClInclude Include="CameraTracker.h" />
+    <ClInclude Include="CameraView.h" />
+    <ClInclude Include="COS.h" />
+    <ClInclude Include="DataCapture.h" />
+    <ClInclude Include="FileWriter.h" />
+    <ClInclude Include="GeneratedFiles\ui_IMUSettings.h" />
+    <ClInclude Include="GeneratedFiles\ui_OptiTrackDialog.h" />
+    <ClInclude Include="GlInfo.h" />
+    <CustomBuild Include="ImageAnalyser.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing ImageAnalyser.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_DLL -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGL_LIB -DQT_SENSORS_LIB -DQT_WIDGETS_LIB -D_CRT_SECURE_NO_WARNINGS -D_MBCS  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtSensors" "-I$(QTDIR)\include\QtWidgets" "-I$(SolutionDir)\GlewLibrary\include" "-I$(SolutionDir)\GlutLibrary\include" "-I$(SolutionDir)\IGLLibrary\include" "-I$(SolutionDir)\GLMLibrary" "-I$(SolutionDir)\MathLibrary" "-I$(SolutionDir)\OpenCVLibrary" "-I$(SolutionDir)\ARLibrary\Metaio\include" "-I$(SolutionDir)\AssetLibrary\include" "-I$(INHERIT)\." "-I$(SolutionDir)\VuzixLibrary\inc" "-I$(SolutionDir)\NatNetLibrary\include" "-fStdAfx.h" "-f../../ImageAnalyser.h"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing ImageAnalyser.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGL_LIB -DQT_SENSORS_LIB -DQT_WIDGETS_LIB -D_MBCS  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtSensors" "-I$(QTDIR)\include\QtWidgets" "-I$(SolutionDir)\GlewLibrary\include" "-I$(SolutionDir)\GlutLibrary\include" "-I$(SolutionDir)\IGLLibrary\include" "-I$(SolutionDir)\GLMLibrary" "-I$(SolutionDir)\MathLibrary" "-I$(SolutionDir)\OpenCVLibrary" "-I$(SolutionDir)\ARLibrary\Metaio\include" "-I$(SolutionDir)\AssetLibrary\include" "-I$(SolutionDir)\VuzixLibrary\inc" "-I$(SolutionDir)\NatNetLibrary\include"</Command>
+    </CustomBuild>
+    <ClInclude Include="ImageView.h" />
+    <ClInclude Include="image_DXT.h" />
+    <ClInclude Include="image_helper.h" />
+    <ClInclude Include="IMU.h" />
+    <ClInclude Include="IMUManager.h" />
+    <ClInclude Include="Marker.h" />
+    <CustomBuild Include="OptiTrack.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing OptiTrack.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_DLL -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGL_LIB -DQT_SENSORS_LIB -DQT_WIDGETS_LIB -D_CRT_SECURE_NO_WARNINGS -D_MBCS  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtSensors" "-I$(QTDIR)\include\QtWidgets" "-I$(SolutionDir)\GlewLibrary\include" "-I$(SolutionDir)\GlutLibrary\include" "-I$(SolutionDir)\IGLLibrary\include" "-I$(SolutionDir)\GLMLibrary" "-I$(SolutionDir)\MathLibrary" "-I$(SolutionDir)\OpenCVLibrary" "-I$(SolutionDir)\ARLibrary\Metaio\include" "-I$(SolutionDir)\AssetLibrary\include" "-I$(INHERIT)\." "-I$(SolutionDir)\VuzixLibrary\inc" "-I$(SolutionDir)\NatNetLibrary\include" "-fStdAfx.h" "-f../../OptiTrack.h"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing OptiTrack.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGL_LIB -DQT_SENSORS_LIB -DQT_WIDGETS_LIB -D_MBCS  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtSensors" "-I$(QTDIR)\include\QtWidgets" "-I$(SolutionDir)\GlewLibrary\include" "-I$(SolutionDir)\GlutLibrary\include" "-I$(SolutionDir)\IGLLibrary\include" "-I$(SolutionDir)\GLMLibrary" "-I$(SolutionDir)\MathLibrary" "-I$(SolutionDir)\OpenCVLibrary" "-I$(SolutionDir)\ARLibrary\Metaio\include" "-I$(SolutionDir)\AssetLibrary\include" "-I$(SolutionDir)\VuzixLibrary\inc" "-I$(SolutionDir)\NatNetLibrary\include"</Command>
+    </CustomBuild>
+    <ClInclude Include="OBJLoader.h" />
+    <ClInclude Include="OBJModels.h" />
+    <ClInclude Include="PBOUnpack.h" />
+    <ClInclude Include="RecordLoader.h" />
+    <ClInclude Include="ReferenceTracker.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="Room.h" />
+    <CustomBuild Include="RotationViewer.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Command>
+    </CustomBuild>
+    <ClInclude Include="SetupLoader.h" />
+    <ClInclude Include="SOIL.h" />
+    <ClInclude Include="stbi_DDS_aug.h" />
+    <ClInclude Include="stbi_DDS_aug_c.h" />
+    <ClInclude Include="stb_image_aug.h" />
+    <CustomBuild Include="TrackingManager.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing TrackingManager.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_DLL -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGL_LIB -DQT_SENSORS_LIB -DQT_WIDGETS_LIB -D_CRT_SECURE_NO_WARNINGS -D_MBCS  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtSensors" "-I$(QTDIR)\include\QtWidgets" "-I$(SolutionDir)\GlewLibrary\include" "-I$(SolutionDir)\GlutLibrary\include" "-I$(SolutionDir)\IGLLibrary\include" "-I$(SolutionDir)\GLMLibrary" "-I$(SolutionDir)\MathLibrary" "-I$(SolutionDir)\OpenCVLibrary" "-I$(SolutionDir)\ARLibrary\Metaio\include" "-I$(SolutionDir)\AssetLibrary\include" "-I$(INHERIT)\." "-I$(SolutionDir)\VuzixLibrary\inc" "-I$(SolutionDir)\NatNetLibrary\include" "-fStdAfx.h" "-f../../TrackingManager.h"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing TrackingManager.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGL_LIB -DQT_SENSORS_LIB -DQT_WIDGETS_LIB -D_MBCS  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtSensors" "-I$(QTDIR)\include\QtWidgets" "-I$(SolutionDir)\GlewLibrary\include" "-I$(SolutionDir)\GlutLibrary\include" "-I$(SolutionDir)\IGLLibrary\include" "-I$(SolutionDir)\GLMLibrary" "-I$(SolutionDir)\MathLibrary" "-I$(SolutionDir)\OpenCVLibrary" "-I$(SolutionDir)\ARLibrary\Metaio\include" "-I$(SolutionDir)\AssetLibrary\include" "-I$(SolutionDir)\VuzixLibrary\inc" "-I$(SolutionDir)\NatNetLibrary\include"</Command>
+    </CustomBuild>
+    <ClInclude Include="Uncertainty.h" />
+    <ClInclude Include="UncertaintyCOS.h" />
+    <ClInclude Include="Util.h" />
+    <ClInclude Include="ValueTree.h" />
+    <ClInclude Include="VirtualObject.h" />
+    <ClInclude Include="VirtualRoom.h" />
+    <ClInclude Include="VirtualSetup.h" />
+    <ClInclude Include="VirtualReality.h" />
+    <ClInclude Include="VirtualMarker.h" />
+    <ClInclude Include="WindowManager.h" />
+    <CustomBuild Include="ARView.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing ARView.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_DLL -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGL_LIB -DQT_SENSORS_LIB -DQT_WIDGETS_LIB -D_CRT_SECURE_NO_WARNINGS -D_MBCS  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtSensors" "-I$(QTDIR)\include\QtWidgets" "-I$(SolutionDir)\GlewLibrary\include" "-I$(SolutionDir)\GlutLibrary\include" "-I$(SolutionDir)\IGLLibrary\include" "-I$(SolutionDir)\GLMLibrary" "-I$(SolutionDir)\MathLibrary" "-I$(SolutionDir)\OpenCVLibrary" "-I$(SolutionDir)\ARLibrary\Metaio\include" "-I$(SolutionDir)\AssetLibrary\include" "-I$(INHERIT)\." "-I$(SolutionDir)\VuzixLibrary\inc" "-I$(SolutionDir)\NatNetLibrary\include" "-fStdAfx.h" "-f../../ARView.h"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing ARView.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGL_LIB -DQT_SENSORS_LIB -DQT_WIDGETS_LIB -D_MBCS  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtSensors" "-I$(QTDIR)\include\QtWidgets" "-I$(SolutionDir)\GlewLibrary\include" "-I$(SolutionDir)\GlutLibrary\include" "-I$(SolutionDir)\IGLLibrary\include" "-I$(SolutionDir)\GLMLibrary" "-I$(SolutionDir)\MathLibrary" "-I$(SolutionDir)\OpenCVLibrary" "-I$(SolutionDir)\ARLibrary\Metaio\include" "-I$(SolutionDir)\AssetLibrary\include" "-I$(SolutionDir)\VuzixLibrary\inc" "-I$(SolutionDir)\NatNetLibrary\include"</Command>
+    </CustomBuild>
+    <CustomBuild Include="ARViewWindow.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing ARViewWindow.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_DLL -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGL_LIB -DQT_SENSORS_LIB -DQT_WIDGETS_LIB -D_CRT_SECURE_NO_WARNINGS -D_MBCS  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtSensors" "-I$(QTDIR)\include\QtWidgets" "-I$(SolutionDir)\GlewLibrary\include" "-I$(SolutionDir)\GlutLibrary\include" "-I$(SolutionDir)\IGLLibrary\include" "-I$(SolutionDir)\GLMLibrary" "-I$(SolutionDir)\MathLibrary" "-I$(SolutionDir)\OpenCVLibrary" "-I$(SolutionDir)\ARLibrary\Metaio\include" "-I$(SolutionDir)\AssetLibrary\include" "-I$(INHERIT)\." "-I$(SolutionDir)\VuzixLibrary\inc" "-I$(SolutionDir)\NatNetLibrary\include" "-fStdAfx.h" "-f../../ARViewWindow.h"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing ARViewWindow.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGL_LIB -DQT_SENSORS_LIB -DQT_WIDGETS_LIB -D_MBCS  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtSensors" "-I$(QTDIR)\include\QtWidgets" "-I$(SolutionDir)\GlewLibrary\include" "-I$(SolutionDir)\GlutLibrary\include" "-I$(SolutionDir)\IGLLibrary\include" "-I$(SolutionDir)\GLMLibrary" "-I$(SolutionDir)\MathLibrary" "-I$(SolutionDir)\OpenCVLibrary" "-I$(SolutionDir)\ARLibrary\Metaio\include" "-I$(SolutionDir)\AssetLibrary\include" "-I$(SolutionDir)\VuzixLibrary\inc" "-I$(SolutionDir)\NatNetLibrary\include"</Command>
+    </CustomBuild>
+    <ClInclude Include="GeneratedFiles\ui_ARView.h" />
+    <ClInclude Include="GeneratedFiles\ui_Darv.h" />
+    <ClInclude Include="Glsu.h" />
+    <ClInclude Include="QTPrimitives.h" />
+    <ClInclude Include="stdafx.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="ARView.ui">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="OptiTrackDialog.ui">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+    </CustomBuild>
+    <CustomBuild Include="Darv.qrc">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath);.\Resources\Skin\iconCapture.png;.\Resources\Skin\iconCapture2.png;.\Resources\Skin\iconIMUReset.png;.\Resources\Skin\iconIMUResetDisabled.png;.\Resources\Skin\iconIMUSetting.png;.\Resources\Skin\iconIMUSettingDisabled.png;.\Resources\Skin\iconOptiReset.png;.\Resources\Skin\iconOptiResetDisabled.png;.\Resources\Skin\iconOptiSetting.png;.\Resources\Skin\iconOptiSettingDisabled.png;.\Resources\Skin\iconViewSetting.png;.\Resources\Skin\iconMonoSetting.png;.\Resources\Skin\iconStereoSetting.png;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Rcc%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\qrc_%(Filename).cpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\rcc.exe" -name "%(Filename)" -no-compress "%(FullPath)" -o .\GeneratedFiles\qrc_%(Filename).cpp</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(FullPath);.\Resources\Skin\iconCapture.png;.\Resources\Skin\iconCapture2.png;.\Resources\Skin\iconIMUReset.png;.\Resources\Skin\iconIMUResetDisabled.png;.\Resources\Skin\iconIMUSetting.png;.\Resources\Skin\iconIMUSettingDisabled.png;.\Resources\Skin\iconOptiReset.png;.\Resources\Skin\iconOptiResetDisabled.png;.\Resources\Skin\iconOptiSetting.png;.\Resources\Skin\iconOptiSettingDisabled.png;.\Resources\Skin\iconViewSetting.png;.\Resources\Skin\iconMonoSetting.png;.\Resources\Skin\iconStereoSetting.png;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Rcc%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\qrc_%(Filename).cpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\rcc.exe" -name "%(Filename)" -no-compress "%(FullPath)" -o .\GeneratedFiles\qrc_%(Filename).cpp</Command>
+    </CustomBuild>
+    <CustomBuild Include="IMUSettings.ui">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+    </CustomBuild>
+    <None Include="Resources\FullQuadFragmentShader.fragmentShader" />
+    <None Include="Resources\FullQuadVertexShader.vertexShader" />
+    <None Include="Resources\Skin\iconCapture.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="Resources\Skin\iconCapture2.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="Resources\Skin\iconIMUReset.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="Resources\Skin\iconIMUResetDisabled.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="Resources\Skin\iconIMUSetting.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="Resources\Skin\iconIMUSettingDisabled.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="Resources\Skin\iconMonoSetting.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="Resources\Skin\iconOptiReset.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="Resources\Skin\iconOptiResetDisabled.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="Resources\Skin\iconOptiSetting.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="Resources\Skin\iconOptiSettingDisabled.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="Resources\Skin\iconStereoSetting.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="Resources\Skin\iconViewSetting.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="DARV.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties UicDir=".\GeneratedFiles" MocDir=".\GeneratedFiles\$(ConfigurationName)" MocOptions="" RccDir=".\GeneratedFiles" lupdateOnBuild="0" lupdateOptions="" lreleaseOptions="" Qt5Version_x0020_Win32="$(DefaultQtVersion)" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

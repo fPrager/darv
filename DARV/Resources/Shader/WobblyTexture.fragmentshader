@@ -1,0 +1,38 @@
+#version 330 core
+
+in vec2 UV;
+
+out vec3 color;
+
+uniform sampler2D renderedTexture;
+uniform sampler2D backgroundTexture;
+uniform float quality;
+
+void main(){
+	float side = 0.5;
+	float cols = 5;
+	float imageWidth = 640;
+	float imageHeight = 480;
+	float power = (1-quality) * 1/(cols*10);
+	vec2 pixelUV = UV;
+	pixelUV.x = int(pixelUV.x * 320) / float(320);
+	pixelUV.y = int(pixelUV.y * 240) / float(240);
+	
+	vec2 upSDown = UV;
+	upSDown.y = 1-upSDown.y; 
+	//float s = sin(cols*3.14159265359*upSDown.x);
+	
+	//vec4 scol = vec4(0,0,0,0);
+	//if(s<0)
+	//	scol = vec4(0,1,0,1) * -s;
+	//else
+	//	scol = vec4(0,0,1,1) * s;
+	//s = (s+1)/2;
+	vec4 vColor = texture( renderedTexture,   pixelUV + power* vec2(sin(320 * 3.14159 * upSDown.x),sin(240 * 3.14159 * upSDown.y)) );
+	vec4 bColor = texture( backgroundTexture, upSDown + power* vec2(sin(imageWidth * 3.14159 * upSDown.x),sin(imageHeight * 3.14159 * upSDown.y)) );
+	float visibility = vColor.a;
+	if(quality < 0.1)
+		visibility *= quality/0.1;
+	color = vColor.rgb * visibility;
+	color = color + bColor.rgb * (1- visibility);
+}
